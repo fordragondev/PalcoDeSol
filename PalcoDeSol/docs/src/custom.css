@@ -1,0 +1,80 @@
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+main>.container {
+  padding-top: 60px;
+}
+
+.tr-gold {
+  /* color: #ffe41e; */
+  color: rgb(255, 201, 13);
+}
+
+.tr-red {
+  color: #5f0800;
+}
+
+.tr-noHover{
+  pointer-events: none;
+}
+
+.tr-gold>tbody>tr {
+  /* color: rgb(255, 201, 13); */
+}
+
+.tr-gold>tbody>tr:nth-of-type(odd)>* {
+  color: rgb(255, 201, 13);
+}
+
+.nombreToreroBtn>.btn {
+  width: 180px;
+}
+
+.tr-select>.form-select {
+  background-color: #212529;
+  color: rgb(255, 201, 13);
+  width: 140px;
+  padding-left: 1rem;
+}
+
+.tr-select>.tr-label {
+  font-weight: bold
+}
+
+.nombreToroBtn>.btn {
+  width: 160px;
+}
+
+.tr-toroSelect>.form-select {
+  width: 160px;
+}
+
+.tr-modal {
+  height: calc(100% - 60px);
+  margin-top: 62px;
+}
+
+.nav-scroller {
+  position: relative;
+  z-index: 2;
+  height: 2.75rem;
+  overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-bottom: 1rem;
+  margin-top: -1px;
+  overflow-x: auto;
+  text-align: center;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media (min-width: 768px) {
+  /* .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  } */
+}
