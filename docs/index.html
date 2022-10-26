@@ -2,7 +2,7 @@
 <html lang="en" class="h-100">
 
 <head>
-	<title>Bootstrap 5 Website Example</title>
+	<title>Palco de Sol</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -49,12 +49,12 @@
 	<main class="flex-shrink-0">
 		<div class="container text-center">
 
-			<!-- Component primer menu -->
+			<!-- Component menu principal -->
 			<div class="row mt-5" id="myfirstMenu">
 				<div class="col-12">
 					<div class="d-grid gap-3 col-8 mx-auto tr-gold">
-						<button type="button" class="btn btn-primary btn-dark tr-gold" data-mdb-toggle="button"
-							id="premiarBtn">Premiar en vivo</button>
+						<button type="button" class="btn btn-primary btn-dark tr-gold" data-bs-toggle="modal"
+							data-bs-target="#premiarEnnVivoModal" id="premiarEnVivoBtn">Premiar en vivo</button>
 						<button type="button" class="btn btn-primary btn-dark tr-gold" data-mdb-toggle="button"
 							id="resultadosVivoBtn">Resultados en vivo</button>
 						<button type="button" class="btn btn-primary btn-dark tr-gold" data-mdb-toggle="button"
@@ -63,28 +63,14 @@
 				</div>
 			</div>
 
-			<!-- Component segundo menu -->
-			<div class="row mt-5 mb-5 d-none" id="myPremiarMenu">
-				<div class="col-12 mx-auto">
-					<div class="d-grid gap-3 col-8 mx-auto">
-						<button type="button" class="btn btn-primary btn-dark tr-gold" data-bs-toggle="modal"
-							data-bs-target="#premiarTorerosModal" id="premiarTorerosBtn">Premiar
-							toreros</button>
-						<button type="button" class="btn btn-primary btn-dark tr-gold" data-bs-toggle="modal"
-						data-bs-target="#premiarTorosModal" id="premiarTorosBtn">Premiar
-							toros</button>
-					</div>					
-				</div>
-			</div>
-
 			<!-- Component Resultados en Vivo -->
 			<div class="row mt-2 d-none" id="myResultadosVivo">
 				<div class="col-12 d-flex mb-0 my-2">
 					<h5 class="text-start flex-grow-1">RESULTADOS</h5>
-					<h5 >(En Vivo)</h5>					
+					<h5>(En Vivo)</h5>
 				</div>
 
-				<div class="col-12 mt-0 my-2">					
+				<div class="col-12 mt-0 my-2">
 					<hr class="mt-0 mb-4">
 					<h5>Puerto de Santa María, Cádiz, España.</h5>
 					<h5>15 de agosto de 2008</h5>
@@ -92,68 +78,107 @@
 
 				<!-- Component Tabla Premios Torero -->
 				<div class="col-12 my-2">
-					<table class="table table-dark table-striped table-hover text-start tr-gold" id="myTablePremiosTorero">
+					<table class="table table-dark table-striped table-hover text-start tr-gold"
+						id="myTableResultadosToreros">
 						<tbody>
-						  <tr>
-							<th scope="row">1</th>
-							<td>JM Manzaneros</td>
-							<td>Palmas</td>
-							<td>ver detalle</td>
-							<!-- <td class="d-none d-sm-block">ver detalle</td> -->
-						  </tr>
-						  <tr>
-							<th scope="row">2</th>
-							<td>Roca Rey</td>
-							<td>Rabo</td>
-							<td>ver detalle</td>
-						  </tr>
-						  <tr>
-							<th scope="row">3</th>
-							<td>Luis Bolivar</td>
-							<td>Dos Orejas</td>
-							<td>ver detalle</td>
-						  </tr>
+							<tr>
+								<th scope="row">1</th>
+								<td>JM Manzaneros</td>
+								<td>Palmas</td>
+								<td>ver detalle</td>
+								<!-- <td class="d-none d-sm-block">ver detalle</td> -->
+							</tr>
+							<tr>
+								<th scope="row">2</th>
+								<td>Roca Rey</td>
+								<td>Rabo</td>
+								<td>ver detalle</td>
+							</tr>
+							<tr>
+								<th scope="row">3</th>
+								<td>Luis Bolivar</td>
+								<td>Dos Orejas</td>
+								<td>ver detalle</td>
+							</tr>
+							<tr>
+								<th scope="row">4</th>
+								<td>JM Manzaneros</td>
+								<td>Una Oreja</td>
+								<td>ver detalle</td>
+								<!-- <td class="d-none d-sm-block">ver detalle</td> -->
+							</tr>
+							<tr>
+								<th scope="row">5</th>
+								<td>Roca Rey</td>
+								<td>Silencio</td>
+								<td>ver detalle</td>
+							</tr>
+							<tr>
+								<th scope="row">6</th>
+								<td>Luis Bolivar</td>
+								<td>Rabo</td>
+								<td>ver detalle</td>
+							</tr>
 						</tbody>
-					  </table>
+					</table>
 				</div>
 
 				<!-- Component Tabla Premios Toro -->
 				<div class="col-12 my-2">
-					<table class="table table-dark table-striped table-hover text-start tr-gold" id="myTablePremiosToro">
+					<table class="table table-dark table-striped table-hover text-start tr-gold"
+						id="myTableResultadosToros">
 						<tbody>
-						  <tr>
-							<th scope="row">1</th>
-							<td>Primer Toro </td>
-							<td>Indulto</td>
-							<td><a>ver detalle</a></td>
-						  </tr>
-						  <tr>
-							<th scope="row">2</th>
-							<td>Segundo Toro</td>
-							<td>Vuelta al Toro</td>
-							<td><a>ver detalle</a></td>
-						  </tr>
-						  <tr>
-							<th scope="row">3</th>
-							<td>Tercer Toro</td>
-							<td>Silencio</td>
-							<td><a>ver detalle</a></td>
-						  </tr>
+							<tr>
+								<th scope="row">1</th>
+								<td>Primer Toro </td>
+								<td>Indulto</td>
+								<td><a>ver detalle</a></td>
+							</tr>
+							<tr>
+								<th scope="row">2</th>
+								<td>Segundo Toro</td>
+								<td>Vuelta al Toro</td>
+								<td><a>ver detalle</a></td>
+							</tr>
+							<tr>
+								<th scope="row">3</th>
+								<td>Tercer Toro</td>
+								<td>Silencio</td>
+								<td><a>ver detalle</a></td>
+							</tr>
+							<tr>
+								<th scope="row">4</th>
+								<td>Cuarto Toro </td>
+								<td>Indulto</td>
+								<td><a>ver detalle</a></td>
+							</tr>
+							<tr>
+								<th scope="row">5</th>
+								<td>Quinto Toro</td>
+								<td>Vuelta al Toro</td>
+								<td><a>ver detalle</a></td>
+							</tr>
+							<tr>
+								<th scope="row">6</th>
+								<td>Sexto Toro</td>
+								<td>Silencio</td>
+								<td><a>ver detalle</a></td>
+							</tr>
 						</tbody>
-					  </table>
+					</table>
 				</div>
 
 
 			</div>
 
-			<!-- Component Resultados en Vivo Torero-->
+			<!-- Component Resultados en Vivo Torero Detalle-->
 			<div class="row mt-2 d-none" id="myResultadoTorero">
 				<div class="col-12 d-flex mb-0 my-2">
 					<h5 class="text-start flex-grow-1">RESULTADOS</h5>
-					<h5 >(En Vivo)</h5>					
+					<h5>(En Vivo)</h5>
 				</div>
 
-				<div class="col-12 mt-0 my-2">					
+				<div class="col-12 mt-0 my-2">
 					<hr class="mt-0 mb-4">
 					<h5>Puerto de Santa María, Cádiz, España.</h5>
 					<h5>15 de agosto de 2008</h5>
@@ -164,226 +189,127 @@
 					<h6>Primer Toro</h6>
 					<table class="table table-dark table-striped table-hover text-start tr-gold">
 						<tbody>
-						  <tr>
-							<th scope="row"></th>
-							<td>Rabo</td>
-							<td>45</td>
-							<td>14.6%</td>
-						  </tr>
-						  <tr>
-							<th scope="row"></th>
-							<td>Dos Orejas</td>
-							<td>180</td>
-							<td>58%</td>
-						  </tr>
-						  <tr>
-							<th scope="row"></th>
-							<td>Una Oreja</td>
-							<td>60</td>
-							<td>19%</td>
-						  </tr>
-						  <tr>
-							<th scope="row"></th>
-							<td>Palmas</td>
-							<td>5</td>
-							<td>2%</td>
-						  </tr>
-						  <tr>
-							<th scope="row"></th>
-							<td>Silencio</td>
-							<td>10</td>
-							<td>4%</td>
-						  </tr>
-						  <tr>
-							<th scope="row"></th>
-							<td>Pitos</td>
-							<td>8</td>
-							<td>3%</td>
-						  </tr>
-						  <tr>
-							<th scope="row"></th>
-							<td>TOTAL</td>
-							<td>308</td>
-							<td></td>
-						  </tr>						  
+							<tr>
+								<th scope="row"></th>
+								<td>Palmas</td>
+								<td>45</td>
+								<td>14.6%</td>
+							</tr>
+							<tr>
+								<th scope="row"></th>
+								<td>Dos Orejas</td>
+								<td>180</td>
+								<td>58%</td>
+							</tr>
+							<tr>
+								<th scope="row"></th>
+								<td>Una Oreja</td>
+								<td>60</td>
+								<td>19%</td>
+							</tr>
+							<tr>
+								<th scope="row"></th>
+								<td>Palmas</td>
+								<td>5</td>
+								<td>2%</td>
+							</tr>
+							<tr>
+								<th scope="row"></th>
+								<td>Rabo</td>
+								<td>10</td>
+								<td>4%</td>
+							</tr>
+							<tr>
+								<th scope="row"></th>
+								<td>Silencio</td>
+								<td>8</td>
+								<td>3%</td>
+							</tr>
+							<tr>
+								<th scope="row"></th>
+								<td>TOTAL</td>
+								<td>308</td>
+								<td></td>
+							</tr>
 						</tbody>
-					  </table>
+					</table>
 				</div>
 
-				<div class="col-12 my-2">
-					<h6>Segundo Toro</h6>
-					<table class="table table-dark table-striped table-hover text-start tr-gold">
-						<tbody>
-						  <tr>
-							<th scope="row"></th>
-							<td>Rabo</td>
-							<td>45</td>
-							<td>14.6%</td>
-						  </tr>
-						  <tr>
-							<th scope="row"></th>
-							<td>Dos Orejas</td>
-							<td>180</td>
-							<td>58%</td>
-						  </tr>
-						  <tr>
-							<th scope="row"></th>
-							<td>Una Oreja</td>
-							<td>60</td>
-							<td>19%</td>
-						  </tr>
-						  <tr>
-							<th scope="row"></th>
-							<td>Palmas</td>
-							<td>5</td>
-							<td>2%</td>
-						  </tr>
-						  <tr>
-							<th scope="row"></th>
-							<td>Silencio</td>
-							<td>10</td>
-							<td>4%</td>
-						  </tr>
-						  <tr>
-							<th scope="row"></th>
-							<td>Pitos</td>
-							<td>8</td>
-							<td>3%</td>
-						  </tr>
-						  <tr>
-							<th scope="row"></th>
-							<td>TOTAL</td>
-							<td>308</td>
-							<td></td>
-						  </tr>						  
-						</tbody>
-					  </table>
-				</div>
-
-				<div class="col-12 my-2">
-					<h6>Tercer Toro</h6>
-					<table class="table table-dark table-striped table-hover text-start tr-gold">
-						<tbody>
-						  <tr>
-							<th scope="row"></th>
-							<td>Rabo</td>
-							<td>45</td>
-							<td>14.6%</td>
-						  </tr>
-						  <tr>
-							<th scope="row"></th>
-							<td>Dos Orejas</td>
-							<td>180</td>
-							<td>58%</td>
-						  </tr>
-						  <tr>
-							<th scope="row"></th>
-							<td>Una Oreja</td>
-							<td>60</td>
-							<td>19%</td>
-						  </tr>
-						  <tr>
-							<th scope="row"></th>
-							<td>Palmas</td>
-							<td>5</td>
-							<td>2%</td>
-						  </tr>
-						  <tr>
-							<th scope="row"></th>
-							<td>Silencio</td>
-							<td>10</td>
-							<td>4%</td>
-						  </tr>
-						  <tr>
-							<th scope="row"></th>
-							<td>Pitos</td>
-							<td>8</td>
-							<td>3%</td>
-						  </tr>
-						  <tr>
-							<th scope="row"></th>
-							<td>TOTAL</td>
-							<td>308</td>
-							<td></td>
-						  </tr>						  
-						</tbody>
-					  </table>
-				</div>
 			</div>
 
-			<!-- Component Resultados en Vivo Ganaderia-->
+			<!-- Component Resultados en Vivo Ganaderia Detalle-->
 			<div class="row mt-2 d-none" id="myResultadoToro">
 				<div class="col-12 d-flex mb-0 my-2">
 					<h5 class="text-start flex-grow-1">RESULTADOS</h5>
-					<h5 >(En Vivo)</h5>					
+					<h5>(En Vivo)</h5>
 				</div>
 
-				<div class="col-12 mt-0 my-2">					
+				<div class="col-12 mt-0 my-2">
 					<hr class="mt-0 mb-4">
 					<h5>Puerto de Santa María, Cádiz, España.</h5>
 					<h5>15 de agosto de 2008</h5>
 					<h6 class="mt-3">Ganadería de Baltsar Ibán</h6>
-					<h6>Primer Toro</h6>
+					<h6>Segundo Toro</h6>
 				</div>
 
 				<div class="col-12 my-2">
 					<table class="table table-dark table-striped table-hover text-start tr-gold">
 						<tbody>
-						  <tr>
-							<th scope="row"></th>
-							<td>Indulto</td>
-							<td>0</td>
-							<td>0%</td>
-						  </tr>
-						  <tr>
-							<th scope="row"></th>
-							<td>Vuelta al Ruedo</td>
-							<td>10</td>
-							<td>6%</td>
-						  </tr>
-						  <tr>
-							<th scope="row"></th>
-							<td>Arrastre Lento</td>
-							<td>50</td>
-							<td>28%</td>
-						  </tr>
-						  <tr>
-							<th scope="row"></th>
-							<td>Palmas</td>
-							<td>100</td>
-							<td>56%</td>
-						  </tr>
-						  <tr>
-							<th scope="row"></th>
-							<td>Silencio</td>
-							<td>20</td>
-							<td>11%</td>
-						  </tr>
-						  <tr>
-							<th scope="row"></th>
-							<td>Pitos</td>
-							<td>0</td>
-							<td>0%</td>
-						  </tr>
-						  <tr>
-							<th scope="row"></th>
-							<td>TOTAL</td>
-							<td>180</td>
-							<td></td>
-						  </tr>						  
+							<tr>
+								<th scope="row"></th>
+								<td>Indulto</td>
+								<td>0</td>
+								<td>0%</td>
+							</tr>
+							<tr>
+								<th scope="row"></th>
+								<td>Vuelta al Ruedo</td>
+								<td>10</td>
+								<td>6%</td>
+							</tr>
+							<tr>
+								<th scope="row"></th>
+								<td>Arrastre Lento</td>
+								<td>50</td>
+								<td>28%</td>
+							</tr>
+							<tr>
+								<th scope="row"></th>
+								<td>Palmas</td>
+								<td>100</td>
+								<td>56%</td>
+							</tr>
+							<tr>
+								<th scope="row"></th>
+								<td>Silencio</td>
+								<td>20</td>
+								<td>11%</td>
+							</tr>
+							<tr>
+								<th scope="row"></th>
+								<td>Pitos</td>
+								<td>0</td>
+								<td>0%</td>
+							</tr>
+							<tr>
+								<th scope="row"></th>
+								<td>TOTAL</td>
+								<td>180</td>
+								<td></td>
+							</tr>
 						</tbody>
-					  </table>
+					</table>
 				</div>
 			</div>
 
-			<!-- Component Resultados Pasados 	-->
+			<!-- Component Resultados Festejos Pasados -->
 			<div class="row mt-2 d-none" id="myResultadosPasados">
 				<div class="col-12 d-flex mb-0 my-2">
 					<h5 class="text-start flex-grow-1">RESULTADOS FESTEJOS PASADOS</h5>
 				</div>
 
 				<!-- Component Select Resultados Pasados 	-->
-				<div class="col-12 mt-0 my-2">					
+				<div class="col-12 mt-0 my-2">
 					<hr class="mt-0 mb-4">
 					<div class="row justify-content-center">
 						<div class="col-6 tr-select">
@@ -419,217 +345,228 @@
 
 				<!-- Component Tabla Resultados Pasados 	-->
 				<div class="col-12 mt-5">
-					<table class="table table-dark table-striped table-hover text-start tr-gold" id="myTableResultadosPasados">
+					<table class="table table-dark table-striped table-hover text-start tr-gold"
+						id="myTableResultadosPasados">
 						<thead>
-						  <tr>
-							<th scope="col">Fecha</th>
-							<th scope="col">Titulo</th>
-							<th scope="col"></th>
-						  </tr>
+							<tr>
+								<th scope="col">Fecha</th>
+								<th scope="col">Titulo</th>
+								<th scope="col"></th>
+							</tr>
 						</thead>
 						<tbody>
-						  <tr>
-							<td>09-2222</td>
-							<td>
-								<h6>Plaza de Toros Valencia</h6>
-								<h6><small class="text-muted">Nombre Torero, Nombre Torero, Nombre Torero</small></h6>
-							</td>
-							<td>ver</td>
-						  </tr>
-						  <tr>
-							<td>10-2222</td>
-							<td>
-								<h6>Plaza de Toros Las Ventas</h6>
-								<h6><small class="text-muted">Nombre Torero, Nombre Torero, Nombre Torero</small></h6>
-							</td>
-							<td>ver</td>
-						  </tr>
-						  <tr>
-							<td>11-2222</td>
-							<td>
-								<h6>Plaza de Toros Monumental de Barcelona</h6>
-								<h6><small class="text-muted">Nombre Torero, Nombre Torero, Nombre Torero</small></h6>
-							</td>
-							<td>ver</td>
-						  </tr>
+							<tr>
+								<td>09-2222</td>
+								<td>
+									<h6>Puerto de Santa María</h6>
+									<h6><small class="text-muted">Nombre Torero, Nombre Torero, Nombre Torero</small>
+									</h6>
+								</td>
+								<td>ver</td>
+							</tr>
+							<tr>
+								<td>10-2222</td>
+								<td>
+									<h6>Plaza de Toros Las Ventas</h6>
+									<h6><small class="text-muted">Nombre Torero, Nombre Torero, Nombre Torero</small>
+									</h6>
+								</td>
+								<td>ver</td>
+							</tr>
+							<tr>
+								<td>11-2222</td>
+								<td>
+									<h6>Plaza de Toros Monumental de Barcelona</h6>
+									<h6><small class="text-muted">Nombre Torero, Nombre Torero, Nombre Torero</small>
+									</h6>
+								</td>
+								<td>ver</td>
+							</tr>
 						</tbody>
-					  </table>
+					</table>
 				</div>
 			</div>
 
-			<!-- Component Resultados Festejos Pasados Torero-->
-			<div class="row mt-2 d-none" id="myResultadoPasadoTorero">
-				<div class="col-12 mb-0 my-2">
-					<h5 class="">RESULTADOS FESTEJOS PASADOS</h5>
-				</div>
-
-				<div class="col-12 mt-0 my-2">					
-					<hr class="mt-0 mb-4">
-					<h5>Puerto de Santa María, Cádiz, España.</h5>
-					<h5>15 de agosto de 2008</h5>
-					<h6 class="mt-3">Luis Bolivar</h6>
-				</div>
-
-				<div class="col-12 my-2">
-					<h6>Primer Toro</h6>
-					<table class="table table-dark table-striped table-hover text-start tr-gold">
-						<tbody>
-						  <tr>
-							<th scope="row"></th>
-							<td>Rabo</td>
-							<td>45</td>
-							<td>14.6%</td>
-						  </tr>
-						  <tr>
-							<th scope="row"></th>
-							<td>Dos Orejas</td>
-							<td>180</td>
-							<td>58%</td>
-						  </tr>
-						  <tr>
-							<th scope="row"></th>
-							<td>Una Oreja</td>
-							<td>60</td>
-							<td>19%</td>
-						  </tr>
-						  <tr>
-							<th scope="row"></th>
-							<td>Palmas</td>
-							<td>5</td>
-							<td>2%</td>
-						  </tr>
-						  <tr>
-							<th scope="row"></th>
-							<td>Silencio</td>
-							<td>10</td>
-							<td>4%</td>
-						  </tr>
-						  <tr>
-							<th scope="row"></th>
-							<td>Pitos</td>
-							<td>8</td>
-							<td>3%</td>
-						  </tr>
-						  <tr>
-							<th scope="row"></th>
-							<td>TOTAL</td>
-							<td>308</td>
-							<td></td>
-						  </tr>						  
-						</tbody>
-					  </table>
-				</div>
-
-				<div class="col-12 my-2">
-					<h6>Segundo Toro</h6>
-					<table class="table table-dark table-striped table-hover text-start tr-gold">
-						<tbody>
-						  <tr>
-							<th scope="row"></th>
-							<td>Rabo</td>
-							<td>45</td>
-							<td>14.6%</td>
-						  </tr>
-						  <tr>
-							<th scope="row"></th>
-							<td>Dos Orejas</td>
-							<td>180</td>
-							<td>58%</td>
-						  </tr>
-						  <tr>
-							<th scope="row"></th>
-							<td>Una Oreja</td>
-							<td>60</td>
-							<td>19%</td>
-						  </tr>
-						  <tr>
-							<th scope="row"></th>
-							<td>Palmas</td>
-							<td>5</td>
-							<td>2%</td>
-						  </tr>
-						  <tr>
-							<th scope="row"></th>
-							<td>Silencio</td>
-							<td>10</td>
-							<td>4%</td>
-						  </tr>
-						  <tr>
-							<th scope="row"></th>
-							<td>Pitos</td>
-							<td>8</td>
-							<td>3%</td>
-						  </tr>
-						  <tr>
-							<th scope="row"></th>
-							<td>TOTAL</td>
-							<td>308</td>
-							<td></td>
-						  </tr>						  
-						</tbody>
-					  </table>
-				</div>
-
-				<div class="col-12 my-2">
-					<h6>Tercer Toro</h6>
-					<table class="table table-dark table-striped table-hover text-start tr-gold">
-						<tbody>
-						  <tr>
-							<th scope="row"></th>
-							<td>Rabo</td>
-							<td>45</td>
-							<td>14.6%</td>
-						  </tr>
-						  <tr>
-							<th scope="row"></th>
-							<td>Dos Orejas</td>
-							<td>180</td>
-							<td>58%</td>
-						  </tr>
-						  <tr>
-							<th scope="row"></th>
-							<td>Una Oreja</td>
-							<td>60</td>
-							<td>19%</td>
-						  </tr>
-						  <tr>
-							<th scope="row"></th>
-							<td>Palmas</td>
-							<td>5</td>
-							<td>2%</td>
-						  </tr>
-						  <tr>
-							<th scope="row"></th>
-							<td>Silencio</td>
-							<td>10</td>
-							<td>4%</td>
-						  </tr>
-						  <tr>
-							<th scope="row"></th>
-							<td>Pitos</td>
-							<td>8</td>
-							<td>3%</td>
-						  </tr>
-						  <tr>
-							<th scope="row"></th>
-							<td>TOTAL</td>
-							<td>308</td>
-							<td></td>
-						  </tr>						  
-						</tbody>
-					  </table>
-				</div>
-			</div>
-
-			<!-- Component Resultados Festejos Pasados Ganaderia-->
-			<div class="row mt-2 d-none" id="myResultadoPasadoToro">
+			<!-- Component Resultados Festejos Pasados Detalle -->
+			<div class="row mt-2 d-none" id="myResultadosPasadosDetalle">
 				<div class="col-12 mb-0 my-2">
 					<h5 class="">RESULTADOS FESTEJOS PASADOS</h5>
 				</div>
 
 				<div class="col-12 mt-0 my-2">
 					<hr class="mt-0 mb-4">
-					<h5>Palacio de Vistalegre, Madrid, España.</h5>
+					<h5>Puerto de Santa María, Cádiz, España.</h5>
+					<h5>15 de agosto de 2008</h5>
+				</div>
+
+				<!-- Component Tabla Resultados Festejos Pasados Torero -->
+				<div class="col-12 my-2">
+					<table class="table table-dark table-striped table-hover text-start tr-gold"
+						id="myTableResultadosPasadosToreros">
+						<tbody>
+							<tr>
+								<th scope="row">1</th>
+								<td>JM Manzaneros</td>
+								<td>Palmas</td>
+								<td>ver detalle</td>
+								<!-- <td class="d-none d-sm-block">ver detalle</td> -->
+							</tr>
+							<tr>
+								<th scope="row">2</th>
+								<td>Roca Rey</td>
+								<td>Rabo</td>
+								<td>ver detalle</td>
+							</tr>
+							<tr>
+								<th scope="row">3</th>
+								<td>Luis Bolivar</td>
+								<td>Dos Orejas</td>
+								<td>ver detalle</td>
+							</tr>
+							<tr>
+								<th scope="row">4</th>
+								<td>JM Manzaneros</td>
+								<td>Una Oreja</td>
+								<td>ver detalle</td>
+								<!-- <td class="d-none d-sm-block">ver detalle</td> -->
+							</tr>
+							<tr>
+								<th scope="row">5</th>
+								<td>Roca Rey</td>
+								<td>Silencio</td>
+								<td>ver detalle</td>
+							</tr>
+							<tr>
+								<th scope="row">6</th>
+								<td>Luis Bolivar</td>
+								<td>Rabo</td>
+								<td>ver detalle</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<!-- Component Tabla Resultados Festejos Pasados Toro -->
+				<div class="col-12 my-2">
+					<table class="table table-dark table-striped table-hover text-start tr-gold"
+						id="myTableResultadosPasadosToros">
+						<tbody>
+							<tr>
+								<th scope="row">1</th>
+								<td>Primer Toro </td>
+								<td>Indulto</td>
+								<td><a>ver detalle</a></td>
+							</tr>
+							<tr>
+								<th scope="row">2</th>
+								<td>Segundo Toro</td>
+								<td>Vuelta al Toro</td>
+								<td><a>ver detalle</a></td>
+							</tr>
+							<tr>
+								<th scope="row">3</th>
+								<td>Tercer Toro</td>
+								<td>Silencio</td>
+								<td><a>ver detalle</a></td>
+							</tr>
+							<tr>
+								<th scope="row">4</th>
+								<td>Cuarto Toro </td>
+								<td>Indulto</td>
+								<td><a>ver detalle</a></td>
+							</tr>
+							<tr>
+								<th scope="row">5</th>
+								<td>Quinto Toro</td>
+								<td>Vuelta al Toro</td>
+								<td><a>ver detalle</a></td>
+							</tr>
+							<tr>
+								<th scope="row">6</th>
+								<td>Sexto Toro</td>
+								<td>Silencio</td>
+								<td><a>ver detalle</a></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				
+			</div>
+
+			<!-- Component Resultados Festejos Pasados Torero Detalle Ganaderia Detalle -->
+			<div class="row mt-2 d-none" id="myResultadoPasadoToreroDetalle">
+				<div class="col-12 mb-0 my-2">
+					<h5 class="">RESULTADOS FESTEJOS PASADOS</h5>
+				</div>
+
+				<div class="col-12 mt-0 my-2">
+					<hr class="mt-0 mb-4">
+					<h5>Puerto de Santa María, Cádiz, España.</h5>
+					<h5>15 de agosto de 2008</h5>
+					<h6 class="mt-3">JM Manzanares</h6>
+				</div>
+
+				<div class="col-12 my-2">
+					<h6>Primer Toro</h6>
+					<table class="table table-dark table-striped table-hover text-start tr-gold">
+						<tbody>
+							<tr>
+								<th scope="row"></th>
+								<td>Palmas</td>
+								<td>45</td>
+								<td>14.6%</td>
+							</tr>
+							<tr>
+								<th scope="row"></th>
+								<td>Dos Orejas</td>
+								<td>180</td>
+								<td>58%</td>
+							</tr>
+							<tr>
+								<th scope="row"></th>
+								<td>Una Oreja</td>
+								<td>60</td>
+								<td>19%</td>
+							</tr>
+							<tr>
+								<th scope="row"></th>
+								<td>Palmas</td>
+								<td>5</td>
+								<td>2%</td>
+							</tr>
+							<tr>
+								<th scope="row"></th>
+								<td>Rabo</td>
+								<td>10</td>
+								<td>4%</td>
+							</tr>
+							<tr>
+								<th scope="row"></th>
+								<td>Silencio</td>
+								<td>8</td>
+								<td>3%</td>
+							</tr>
+							<tr>
+								<th scope="row"></th>
+								<td>TOTAL</td>
+								<td>308</td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+			</div>
+
+			<!-- Component Resultados Festejos Pasados Toro Detalle Ganaderia Detalle -->
+			<div class="row mt-2 d-none" id="myResultadoPasadoToroDetalle">
+				<div class="col-12 mb-0 my-2">
+					<h5 class="">RESULTADOS FESTEJOS PASADOS</h5>
+				</div>
+
+				<div class="col-12 mt-0 my-2">
+					<hr class="mt-0 mb-4">
+					<h5>Puerto de Santa María, Cádiz, España.</h5>
 					<h5>15 de agosto de 2008</h5>
 					<h6 class="mt-3">Ganadería de Victorino Martín</h6>
 					<h6>Primer Toro</h6>
@@ -638,50 +575,50 @@
 				<div class="col-12 my-2">
 					<table class="table table-dark table-striped table-hover text-start tr-gold">
 						<tbody>
-						  <tr>
-							<th scope="row"></th>
-							<td>Indulto</td>
-							<td>0</td>
-							<td>0%</td>
-						  </tr>
-						  <tr>
-							<th scope="row"></th>
-							<td>Vuelta al Ruedo</td>
-							<td>10</td>
-							<td>6%</td>
-						  </tr>
-						  <tr>
-							<th scope="row"></th>
-							<td>Arrastre Lento</td>
-							<td>50</td>
-							<td>28%</td>
-						  </tr>
-						  <tr>
-							<th scope="row"></th>
-							<td>Palmas</td>
-							<td>100</td>
-							<td>56%</td>
-						  </tr>
-						  <tr>
-							<th scope="row"></th>
-							<td>Silencio</td>
-							<td>20</td>
-							<td>11%</td>
-						  </tr>
-						  <tr>
-							<th scope="row"></th>
-							<td>Pitos</td>
-							<td>0</td>
-							<td>0%</td>
-						  </tr>
-						  <tr>
-							<th scope="row"></th>
-							<td>TOTAL</td>
-							<td>180</td>
-							<td></td>
-						  </tr>						  
+							<tr>
+								<th scope="row"></th>
+								<td>Indulto</td>
+								<td>0</td>
+								<td>0%</td>
+							</tr>
+							<tr>
+								<th scope="row"></th>
+								<td>Vuelta al Ruedo</td>
+								<td>10</td>
+								<td>6%</td>
+							</tr>
+							<tr>
+								<th scope="row"></th>
+								<td>Arrastre Lento</td>
+								<td>50</td>
+								<td>28%</td>
+							</tr>
+							<tr>
+								<th scope="row"></th>
+								<td>Palmas</td>
+								<td>100</td>
+								<td>56%</td>
+							</tr>
+							<tr>
+								<th scope="row"></th>
+								<td>Silencio</td>
+								<td>20</td>
+								<td>11%</td>
+							</tr>
+							<tr>
+								<th scope="row"></th>
+								<td>Pitos</td>
+								<td>0</td>
+								<td>0%</td>
+							</tr>
+							<tr>
+								<th scope="row"></th>
+								<td>TOTAL</td>
+								<td>180</td>
+								<td></td>
+							</tr>
 						</tbody>
-					  </table>
+					</table>
 				</div>
 			</div>
 
@@ -695,45 +632,48 @@
 		</div>
 	</main>
 
-	<footer class="footer mt-auto mb-0 bg-dark">
-		<div class="container">
-			<!-- <div class="row bg-white text-end py-3">
-				<div class="col-12">
-					<a class="text-black mx-2 d-none" id="volverBtn"> Volver</a>
-				</div>
-			</div> -->
-			<div class="row text-center py-3">
-				<div class="col-12">
-					<span class="text-white">@madeby</span>
-				</div>
-			</div>
-		</div>
-	</footer>
-
-	<!-- Modal Premiar Toreros -->
-	<div class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" id="premiarTorerosModal">
+	<!-- Modal Premiar en Vivo -->
+	<div class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+		id="premiarEnnVivoModal">
 		<div class="modal-dialog modal-fullscreen tr-modal">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title">Premiar Toreros</h5>
+					<h5 class="modal-title">Premiar en Vivo</h5>
 					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 				</div>
 				<div class="modal-body">
 					<div class="container-fluid px-0">
-					<!-- Component premiar torero -->
+
+						<!-- Toast -->
+						<div class="toast-container position-fixed top-0 end-0 p-3" style="z-index: 11">
+							<div class="toast hide align-items-center" role="alert" aria-live="assertive" aria-atomic="true" id="liveToast">
+								<div class="d-flex">
+									<div class="toast-body">
+										<svg class="bd-placeholder-img rounded me-2" width="20" height="20" xmlns=""
+											aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+											<rect width="100%" height="100%" fill="rgb(255, 201, 13)"></rect>
+										</svg>
+										<small class="">Calificación enviada !</small>
+									</div>
+									<button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+								</div>
+							</div>
+						</div>
+
+						<!-- Component premiar torero -->
 						<div class="row text-center">
 							<div class="col-12 my-2">
 								<h5>Puerto de Santa María, Cádiz, España.</h5>
 								<h5>15 de agosto de 2008</h5>
 							</div>
 
-							<div class="col-12 d-flex justify-content-center my-2">
+							<div class="col-12 d-flex justify-content-center mt-2">
 								<div class="nombreToreroBtn">
 									<button class="btn btn-dark tr-gold tr-noHover" type="button">
 										JM Manzanares
 									</button>
 								</div>
-								<div class="tr-select" >
+								<div class="tr-select">
 									<select class="form-select" aria-label="calificar torero" id="calificarTorero1">
 										<option selected>Calificar</option>
 										<option value="1">Palmas</option>
@@ -742,17 +682,36 @@
 										<option value="4">Rabo</option>
 										<option value="5">Silencio</option>
 										<option value="6">Pitos</option>
-									  </select>
-								</div>						
+									</select>
+								</div>
 							</div>
 
-							<div class="col-12 d-flex justify-content-center my-2">
+							<div class="col-12 d-flex justify-content-center mb-2">
+								<div class="nombreToroBtn">
+									<button class="btn btn-secondary tr-gold tr-noHover" type="button">
+										Primer Toro
+									</button>
+								</div>
+								<div class="tr-select tr-toroSelect">
+									<select class="form-select" aria-label="calificar toro" id="calificarToro1">
+										<option selected>Calificar</option>
+										<option value="1">Indulto</option>
+										<option value="2">Vuelta al toro</option>
+										<option value="3">Arrastre Lento</option>
+										<option value="4">Palmas</option>
+										<option value="5">Silencio</option>
+										<option value="6">Pitos</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="col-12 d-flex justify-content-center mt-2">
 								<div class="nombreToreroBtn">
 									<button class="btn btn-dark tr-gold tr-noHover" type="button">
 										Roca Rey
 									</button>
 								</div>
-								<div class="tr-select" >
+								<div class="tr-select">
 									<select class="form-select" aria-label="calificar torero">
 										<option selected>Calificar</option>
 										<option value="1">Palmas</option>
@@ -761,97 +720,18 @@
 										<option value="4">Rabo</option>
 										<option value="5">Silencio</option>
 										<option value="6">Pitos</option>
-									  </select>
+									</select>
 								</div>
 							</div>
 
-							<div class="col-12 d-flex justify-content-center my-2">
-								<div class="nombreToreroBtn">
-									<button class="btn btn-dark tr-gold tr-noHover" type="button">
-										Luis Bolivar
-									</button>
-								</div>
-								<div class="tr-select" >
-									<select class="form-select" aria-label="calificar torero">
-										<option selected>Calificar</option>
-										<option value="1">Palmas</option>
-										<option value="2">Dos orejas</option>
-										<option value="3">Una oreja</option>
-										<option value="4">Rabo</option>
-										<option value="5">Silencio</option>
-										<option value="6">Pitos</option>
-									  </select>
-								</div>
-							</div>
-
-							<div class="col-12 d-flex justify-content-center my-2">
-								<div class="">
-									<button class="btn btn-warning" type="button" id="enviarToreroBtn"
-										data-bs-dismiss="modal" aria-label="Close">
-										Enviar
-									</button>
-								</div>
-							</div>
-
-							<div class="col-12 fs-6 my-2 mt-4">
-								<p class="text-muted fs-6">Califique la actuación al terminar cada faena.</p>
-								<p class="text-muted">Si cambia un toro únicamente califique la actuación con el sombrero.
-								</p>
-								<p class="text-muted">Si por incidente un torero es reemplazado, califique en la casillaque
-									corresponde al torero incapacitado.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- Modal Premiar Toros -->
-	<div class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" id="premiarTorosModal">
-		<div class="modal-dialog modal-fullscreen tr-modal">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title">Premiar Toros</h5>
-					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-				</div>
-				<div class="modal-body">
-					<div class="container-fluid px-0">
-					<!-- Component premiar toros -->
-						<div class="row text-center">
-							<div class="col-12 my-2">
-								<h5>Puerto de Santa María, Cádiz, España.</h5>
-								<h5>15 de agosto de 2008</h5>
-								<h5 class="mt-3">Ganadería de Baltsar Ibán</h5>
-							</div>
-
-							<div class="col-12 d-flex justify-content-center my-2">
-								<div class="nombreToroBtn">
-									<button class="btn btn-dark tr-gold tr-noHover" type="button">
-										Primer Toro
-									</button>
-								</div>
-								<div class="tr-select tr-toroSelect" >
-									<select class="form-select" aria-label="calificar torero" id="calificarToro1">
-										<option selected>Calificar</option>
-										<option value="1">Indulto</option>
-										<option value="2">Vuelta al toro</option>
-										<option value="3">Arrastre Lento</option>
-										<option value="4">Palmas</option>
-										<option value="5">Silencio</option>
-										<option value="6">Pitos</option>
-									  </select>
-								</div>						
-							</div>
-
-							<div class="col-12 d-flex justify-content-center my-2">
+							<div class="col-12 d-flex justify-content-center mb-2">
 								<div class="nombreToroBtn">
 									<button class="btn btn-dark tr-gold tr-noHover" type="button">
 										Segundo Toro
 									</button>
 								</div>
-								<div class="tr-select tr-toroSelect" >
-									<select class="form-select" aria-label="calificar torero">
+								<div class="tr-select tr-toroSelect">
+									<select class="form-select" aria-label="calificar toro" id="calificarToro1">
 										<option selected>Calificar</option>
 										<option value="1">Indulto</option>
 										<option value="2">Vuelta al toro</option>
@@ -859,18 +739,37 @@
 										<option value="4">Palmas</option>
 										<option value="5">Silencio</option>
 										<option value="6">Pitos</option>
-									  </select>
+									</select>
 								</div>
 							</div>
 
-							<div class="col-12 d-flex justify-content-center my-2">
+							<div class="col-12 d-flex justify-content-center mt-2">
+								<div class="nombreToreroBtn">
+									<button class="btn btn-dark tr-gold tr-noHover" type="button">
+										Luis Bolivar
+									</button>
+								</div>
+								<div class="tr-select">
+									<select class="form-select" aria-label="calificar torero">
+										<option selected>Calificar</option>
+										<option value="1">Palmas</option>
+										<option value="2">Dos orejas</option>
+										<option value="3">Una oreja</option>
+										<option value="4">Rabo</option>
+										<option value="5">Silencio</option>
+										<option value="6">Pitos</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="col-12 d-flex justify-content-center mb-2">
 								<div class="nombreToroBtn">
 									<button class="btn btn-dark tr-gold tr-noHover" type="button">
 										Tercer Toro
 									</button>
 								</div>
-								<div class="tr-select tr-toroSelect" >
-									<select class="form-select" aria-label="calificar torero">
+								<div class="tr-select tr-toroSelect">
+									<select class="form-select" aria-label="calificar toro" id="calificarToro1">
 										<option selected>Calificar</option>
 										<option value="1">Indulto</option>
 										<option value="2">Vuelta al toro</option>
@@ -878,22 +777,144 @@
 										<option value="4">Palmas</option>
 										<option value="5">Silencio</option>
 										<option value="6">Pitos</option>
-									  </select>
+									</select>
 								</div>
 							</div>
 
-							<div class="col-12 d-flex justify-content-center my-2">
-								<div class="">
-									<button class="btn btn-warning" type="button" id="enviarToroBtn"
-										data-bs-dismiss="modal" aria-label="Close">
-										Enviar
+							<div class="col-12 d-flex justify-content-center mt-2">
+								<div class="nombreToreroBtn">
+									<button class="btn btn-dark tr-gold tr-noHover" type="button">
+										JM Manzanares
 									</button>
 								</div>
+								<div class="tr-select">
+									<select class="form-select" aria-label="calificar torero" id="">
+										<option selected>Calificar</option>
+										<option value="1">Palmas</option>
+										<option value="2">Dos orejas</option>
+										<option value="3">Una oreja</option>
+										<option value="4">Rabo</option>
+										<option value="5">Silencio</option>
+										<option value="6">Pitos</option>
+									</select>
+								</div>
 							</div>
 
+							<div class="col-12 d-flex justify-content-center mb-2">
+								<div class="nombreToroBtn">
+									<button class="btn btn-dark tr-gold tr-noHover" type="button">
+										Cuarto Toro
+									</button>
+								</div>
+								<div class="tr-select tr-toroSelect">
+									<select class="form-select" aria-label="calificar toro" id="calificarToro1">
+										<option selected>Calificar</option>
+										<option value="1">Indulto</option>
+										<option value="2">Vuelta al toro</option>
+										<option value="3">Arrastre Lento</option>
+										<option value="4">Palmas</option>
+										<option value="5">Silencio</option>
+										<option value="6">Pitos</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="col-12 d-flex justify-content-center mt-2">
+								<div class="nombreToreroBtn">
+									<button class="btn btn-dark tr-gold tr-noHover" type="button">
+										Roca Rey
+									</button>
+								</div>
+								<div class="tr-select">
+									<select class="form-select" aria-label="calificar torero">
+										<option selected>Calificar</option>
+										<option value="1">Palmas</option>
+										<option value="2">Dos orejas</option>
+										<option value="3">Una oreja</option>
+										<option value="4">Rabo</option>
+										<option value="5">Silencio</option>
+										<option value="6">Pitos</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="col-12 d-flex justify-content-center mb-2">
+								<div class="nombreToroBtn tr-toroSelect">
+									<button class="btn btn-dark tr-gold tr-noHover" type="button">
+										Quinto Toro
+									</button>
+								</div>
+								<div class="tr-select tr-toroSelect">
+									<select class="form-select" aria-label="calificar toro" id="calificarToro1">
+										<option selected>Calificar</option>
+										<option value="1">Indulto</option>
+										<option value="2">Vuelta al toro</option>
+										<option value="3">Arrastre Lento</option>
+										<option value="4">Palmas</option>
+										<option value="5">Silencio</option>
+										<option value="6">Pitos</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="col-12 d-flex justify-content-center mt-2">
+								<div class="nombreToreroBtn">
+									<button class="btn btn-dark tr-gold tr-noHover" type="button">
+										Luis Bolivar
+									</button>
+								</div>
+								<div class="tr-select">
+									<select class="form-select" aria-label="calificar torero">
+										<option selected>Calificar</option>
+										<option value="1">Palmas</option>
+										<option value="2">Dos orejas</option>
+										<option value="3">Una oreja</option>
+										<option value="4">Rabo</option>
+										<option value="5">Silencio</option>
+										<option value="6">Pitos</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="col-12 d-flex justify-content-center mb-2">
+								<div class="nombreToroBtn">
+									<button class="btn btn-dark tr-gold tr-noHover" type="button">
+										Sexto Toro
+									</button>
+								</div>
+								<div class="tr-select tr-toroSelect">
+									<select class="form-select" aria-label="calificar toro" id="calificarToro1">
+										<option selected>Calificar</option>
+										<option value="1">Indulto</option>
+										<option value="2">Vuelta al toro</option>
+										<option value="3">Arrastre Lento</option>
+										<option value="4">Palmas</option>
+										<option value="5">Silencio</option>
+										<option value="6">Pitos</option>
+									</select>
+								</div>
+							</div>
+
+							<!-- <div class="col-12 d-flex justify-content-center mt-1 mb-2">
+									<div class="">
+										<button class="btn btn-warning" type="button" id="enviarToreroBtn"
+											data-bs-dismiss="modal" aria-label="Close">
+											Enviar
+										</button>
+									</div>
+								</div> -->
+
 							<div class="col-12 fs-6 my-2 mt-4">
-								<p class="text-muted fs-6">Califique en el orden de lidia.</p>
-								<p class="text-muted">En caso de toro devuelto, únicamente califique el toro que salió para la lidia completa.</p>
+								<p class="text-muted">Califique la actuación al terminar cada faena.</p>
+								<p class="text-muted">Si cambia un toro únicamente califique la actuación con el
+									sombrero. </p>
+								<p class="text-muted">Si por incidente un torero es reemplazado, califique en la casilla
+									que
+									corresponde al torero incapacitado.</p>
+								<p class="text-muted">-----</p>
+								<p class="text-muted">Califique en el orden de lidia.</p>
+								<p class="text-muted">En caso de toro devuelto, únicamente califique el toro que salió
+									para la lidia completa. </p>
 							</div>
 						</div>
 					</div>
@@ -901,6 +922,17 @@
 			</div>
 		</div>
 	</div>
+
+	<!-- footer -->
+	<footer class="footer mt-auto mb-0 bg-dark">
+		<div class="container">
+			<div class="row text-center py-3">
+				<div class="col-12">
+					<span class="text-white">@forDragon.dev</span>
+				</div>
+			</div>
+		</div>
+	</footer>
 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
