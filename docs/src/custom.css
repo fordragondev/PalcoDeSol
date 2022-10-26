@@ -11,10 +11,6 @@ main>.container {
   color: rgb(255, 201, 13);
 }
 
-.tr-red {
-  color: #5f0800;
-}
-
 .tr-noHover{
   pointer-events: none;
 }
@@ -27,14 +23,15 @@ main>.container {
   color: rgb(255, 201, 13);
 }
 
-.nombreToreroBtn>.btn {
-  width: 180px;
+.nombreToreroBtn>.btn, .nombreToroBtn>.btn {
+  width: 160px;
+  border: 1px solid #ced4da;
 }
 
 .tr-select>.form-select {
   background-color: #212529;
   color: rgb(255, 201, 13);
-  width: 140px;
+  width: 160px;
   padding-left: 1rem;
 }
 
@@ -43,11 +40,10 @@ main>.container {
 }
 
 .nombreToroBtn>.btn {
-  width: 160px;
+  background-color: #383f46;
 }
-
 .tr-toroSelect>.form-select {
-  width: 160px;
+  background-color: #383f46;
 }
 
 .tr-modal {
